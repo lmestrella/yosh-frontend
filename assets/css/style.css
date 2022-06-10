@@ -1,0 +1,152 @@
+:root {
+  --color-red: hsl(346, 84%, 61%);
+  --color-blue: hsl(195, 83%, 38%);
+  --color-green: hsl(164, 95%, 43%);
+  --color-yellow: hsl(41, 100%, 67%);
+}
+
+*,
+*::before,
+*::after {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-family: Verdana, sans-serif;
+}
+
+body {
+  background-color: #2c302e;
+  display: -ms-grid;
+  display: grid;
+  grid-template: "header" auto "main" 2fr "footer" 1fr / 1fr;
+  min-height: 100vh;
+}
+
+body > * {
+  padding: 1.5em;
+}
+
+.header {
+  background-color: #161817;
+  -webkit-box-shadow: 0 0 60vh 2em rgba(255, 225, 186, 0.25);
+          box-shadow: 0 0 60vh 2em rgba(255, 225, 186, 0.25);
+  color: var(--color-yellow);
+  grid-area: header;
+  text-align: center;
+}
+
+.main {
+  grid-area: main;
+}
+
+.footer {
+  grid-area: footer;
+}
+
+.bet__category {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 100%;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding-top: 1em;
+}
+
+.bet__category .card {
+  border-radius: 1em;
+  -webkit-box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.25);
+          box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.25);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  font-weight: bold;
+  min-width: 30vw;
+  text-align: center;
+}
+
+.bet__category .card__text-wrapper {
+  margin: 0.3em 0;
+}
+
+.bet__category .card:nth-of-type(1) .bet__label {
+  background-color: #d23257;
+}
+
+.bet__category .card:nth-of-type(2) .bet__label {
+  background-color: #159372;
+}
+
+.bet__category .card:nth-of-type(3) .bet__label {
+  background-color: #1a5e74;
+}
+
+.bet__category--meron {
+  background-color: var(--color-red);
+}
+
+.bet__category--draw {
+  background-color: var(--color-green);
+}
+
+.bet__category--wala {
+  background-color: var(--color-blue);
+}
+
+.bet__label {
+  color: #fff;
+  font-size: clamp(4rem, 4.5vw, 7rem);
+  font-style: italic;
+  margin-bottom: 0.5em;
+}
+
+.bet__total {
+  font-size: clamp(4rem, 6vw, 6rem);
+  letter-spacing: 1px;
+}
+
+.bet__odds {
+  font-size: clamp(5.5rem, 6vw, 7.5rem);
+  margin-top: auto !important;
+}
+
+.number {
+  font-family: Consolas;
+}
+
+.winner {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.winner__label {
+  color: var(--color-yellow);
+  font-size: 2rem;
+  margin-top: 0.5em;
+}
+
+.winner__name {
+  background-color: #fff;
+  color: #000;
+  font-size: 5rem;
+  padding: 20px 30px;
+  text-transform: uppercase;
+}
+/*# sourceMappingURL=style.css.map */
